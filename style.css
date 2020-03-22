@@ -1,5 +1,66 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, minmax(250px, 350px));
-    grid-template-rows: 1100px 500px 100px;
+    grid-template-columns: repeat(4, minmax(256px, 361px));
+    grid-template-rows: 1100px 200px 90px;
+    grid-row-gap: 2px;
+    grid-column-gap: 5px;
+    overflow: hidden;
+    grid-template-areas: 
+    "main   main    main    main"
+    "block1 block2 block3 block4"
+    "footer footer footer footer";
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(/home/lyndexer/practice_projects/apple-webpage-project/images/your_verse_hero.jpg) no-repeat 50% 100%;
+    background-size: cover;
+}
+
+.header {
+    border: 1px solid black;
+}
+
+.nav-bar {
+    background-color: brown;
+}
+
+.block1 {
+    grid-area: block1;
+}
+
+.block2 {
+    grid-area: block2;
+}
+
+.block3 {
+    grid-area: block3;
+}
+
+.block4 {
+    grid-area: block4;
+}
+
+.footer {
+    grid-area: footer;
 }
