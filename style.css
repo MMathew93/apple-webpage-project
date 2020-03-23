@@ -13,12 +13,13 @@ html {
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, minmax(256px, 361px));
-    grid-template-rows: 1100px 200px 90px;
+    grid-template-columns: repeat(4, minmax(240px, 355px));
+    grid-template-rows: 950px 200px 90px;
     grid-row-gap: 2px;
     grid-column-gap: 5px;
     overflow: hidden;
@@ -38,11 +39,22 @@ body {
 }
 
 .header {
-    border: 1px solid black;
+    width: 845px;
+    height: 36px;
+    margin-top: 80px;
 }
 
 .nav-bar {
-    background-color: brown;
+    display: flex;
+}
+
+.navbtn {
+    flex: auto;
+    height: 36px;
+}
+
+.nav-search {
+    display: flex;
 }
 
 .block1 {
