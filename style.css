@@ -1,10 +1,13 @@
+/* General CSS RUles */
 html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-  }
+}
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
     box-sizing: inherit;
@@ -16,6 +19,36 @@ body {
     margin: 0;
 }
 
+a {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    border-left: 1px solid #ccc;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+li a {
+    display: inline;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+/*Main page */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, minmax(240px, 355px));
@@ -23,10 +56,10 @@ body {
     grid-row-gap: 2px;
     grid-column-gap: 5px;
     overflow: hidden;
-    grid-template-areas: 
-    "main   main    main    main"
-    "block1 block2 block3 block4"
-    "footer footer footer footer";
+    grid-template-areas:
+        "main   main    main    main"
+        "block1 block2 block3 block4"
+        "footer footer footer footer";
 }
 
 .main {
@@ -38,23 +71,102 @@ body {
     background-size: cover;
 }
 
+/*Header */
 .header {
-    width: 845px;
     height: 36px;
     margin-top: 80px;
 }
 
 .nav-bar {
     display: flex;
+    overflow: hidden;
 }
 
 .navbtn {
     flex: auto;
     height: 36px;
+    border: 0;
+    border: 1px solid #707070;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-image: linear-gradient(to top, #838383, #54575a, #8a8a8a);
+    color: white;
+    text-align: center;
+}
+
+.navbtn:hover {
+    background-image: linear-gradient(to top, #555, #333435, #575757);
+}
+
+.btn1 {
+    border-radius: 4px 0 0 4px;
+}
+
+.fab {
+    font-size: 20px;
 }
 
 .nav-search {
     display: flex;
+    border-radius: 0 4px 4px 0;
+    padding: 0;
+}
+
+.search {
+    flex: auto;
+    align-self: center;
+    background-image:
+        url(/home/lyndexer/practice_projects/apple-webpage-project/images/icons8-search.svg),
+        linear-gradient(to top, #838383, #646769, #8a8a8a);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 22px;
+    width: 120px;
+    border-radius: 25px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: text;
+    background-position: left;
+    color: white;
+    text-align: left;
+    padding-left: 25px;
+    box-shadow: inset 0 2px 1px rgb(53, 52, 52);
+}
+
+.search:focus {
+    width: 200px;
+    background-color: white;
+    background-image: url(/home/lyndexer/practice_projects/apple-webpage-project/images/icons8-search.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    color: black;
+    text-align: left;
+    background-size: contain;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    margin-top: 250px;
+}
+
+/*Main Page Text*/
+.title {
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+.subheadline {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.center-piece {
+    font-size: 25px;
+    font-weight: 100;
 }
 
 .block1 {
@@ -73,6 +185,44 @@ body {
     grid-area: block4;
 }
 
+/*Footer */
 .footer {
     grid-area: footer;
+    font-size: 10px;
+}
+
+.footer-wrapper {
+    margin-left: 15%;
+}
+
+.left {
+    position: absolute;
+}
+
+.clear {
+    margin-top: 25px;
+    display: flex;
+}
+
+.piped {
+    display: flex;
+    margin-top: 10px;
+    height: 13px;
+}
+
+.copyright {
+    display: flex;
+}
+
+.foot-right {
+    float: right;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 10%;
+}
+
+.first {
+    border: none;
+
 }
